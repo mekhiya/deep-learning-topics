@@ -48,19 +48,36 @@ Autoencoders used for non linear and complex data.
 
 In simple neural network architecture when inout layers have more nodes then next layer. Next layers performs a compression or dimension reduction similar. This is similar ot PCA action.
 
-Can You Explain How Autoencoders Can be Used for Anomaly Detection?
+**Explain How Autoencoders Can be Used for Anomaly Detection?**
 
-What are some applications of AutoEncoders
+Autoencoder is a neural network that is used to learn efficient codings of unlabeled data (unsupervised learning). An autoencoder learns two functions: an encoding function that transforms the input data, and a decoding function that recreates the input data from the encoded representation.
+Autoencoder learns patterns , basic representation of normal data and reconstruction with minimum error. Reconstruction error can be used in identifying anomaly from normal data.
 
-How can uncertainty be introduced into Autoencoders, & what are the benefits and challenges of doing so?
+**applications of AutoEncoders**
 
-Can you explain what VAE is and describe its training process?
+Dimension reduction, Anomaly detection, Denoising, Feature extraction, feature learning, recommendation systems, data generation, convolution autoencoders, generative modeling, image compression, image generation
 
-Explain what Kullback-Leibler (KL) divergence is & why does it matter in VAEs?
+**uncertainty |  Autoencoders |  challenges**
 
-Can you explain what reconstruction loss is & it’s function in VAEs?
+An autoencoder could misclassify input errors that are different from those in the training set or changes in underlying relationships that a human would notice. Another drawback is you may eliminate the vital information in the input data.
 
-What is ELBO & What is this trade-off between reconstructionQuality & regularization?
+**VAE training process**
+
+Variational autoencoder (VAE) is a technique used to improve the quality of AI generated images you create with the text-to-image model Stable Diffusion. VAE encodes the image into a latent space and then that latent space is decoded into a new, higher quality image.
+Variational autoencoders are unsupervised learning methods, don't require labels in addition to the data inputs. 
+During the training process, the VAE adjusts the parameters of the encoder and decoder networks to minimize reconstruction error &  KL divergence between the variational distribution and the true posterior distribution.
+
+**Kullback-Leibler (KL) divergence in VAEs**
+KL quantifies how much one probability distribution differs from another probability distribution. The KL divergence between two distributions Q and P is often stated using the following notation: KL(P || Q)
+
+**reconstruction loss in VAEs**
+Reconstruction loss ensures a close match of output with input in VAEs. 
+loss function is used to minimize reconstruction error. It is regularized by the KL divergence between the probability distribution of training data (the prior distribution) and the distribution of latent variables learned by the VAE (the posterior distribution).
+
+**ELBO | reconstructionQuality | regularization**
+ELBO -  Evidence Lower Bound loss
+Regularisation - techniques that calibrate models to minimize the adjusted loss function and prevent overfitting or underfitting.
+The goal of regularization is to encourage models to learn the broader patterns within the data rather than memorizing it.
 
 Can you explain the training & optimization process of VAEs?
 
