@@ -1,31 +1,52 @@
 # deep-learning-topics
 Deep Learning Topics 
 
-**What are Discriminative Models, give examples?**
+**What are Discriminative Models?**
+
 More like a classification model. Convolutional Neural Network (CNN) is good example. CNN learns features on images from training dataset. FIgures out atterns & decision boundary that distinguishes different class. Later enables multiclass image classification.
 
-**What is the difference between generative and discriminative models?**
+**generative vs discriminative models**
 
 ![Discriminative-Models-vs-Generative-Models](https://github.com/mekhiya/deep-learning-topics/assets/8952786/544d2b62-eb76-4269-a63e-302c526e35ec)
 
-**What are Autoencoders and How Do They Work?**
+**What are Autoencoders**
+
 Autoencoders are special neural networks that learn how to recreate the information. They can -  reduce the number of features in a dataset, extracting meaningful features from data, detecting anomalies, and generating new data. It is trained to copy its input to its output.
 For eg:- given an image of a handwritten digit, an autoencoder first encodes the image into a lower dimensional latent representation, then decodes the latent representation back to an image
 Stable Diffusion uses latent diffusion model.
 ![Autoencoders-1](https://github.com/mekhiya/deep-learning-topics/assets/8952786/4488be3e-4723-4e63-b8cf-d99c481e53d5)
 
-**What are some popular autoencoders, mention few?**
+**popular autoencoders**
+
 Unlike the AR language model(which uses auto-regression to find next word), BERT is autoencoder(AE) language model. It reconstruct the original data from corrupted input. corrupted input = [MASK] . Mask replaces the original token into in the pre-train phase.
 ![Autoencoders](https://github.com/mekhiya/deep-learning-topics/assets/8952786/3f715dca-4156-4f67-8570-23e4d478063c)
 
-**What is the role of the Loss function in Autoencoders, & how is it different from other NN?**
-Loss function in Autoencoders vs loss function in NN
+**role of the Loss function in Autoencoders vs role of Loss function in other NN**
 
-How do autoencoders differ from (PCA)?
+_Loss function in Autoencoders_
+loss function for autoencoders are reconstruction loss. It measure the difference between the model input and output. The reconstruction error is calculated using Mean Squared Error (MSE) Loss & L1 Loss popular option.
+Autoencoder is trained for data compression. Loss function in Autoencoder measures result vs reality of encoding-decoding process, process of reconstructing compressed input.
 
-Which one is better for reconstruction linear autoencoder or PCA?
+_Loss function in other NN_
+loss function measures success of NN model in performing a certain task - regression or classification (binary, multiclass). Loss is minimised with backpropagation step.
 
-How can you recreate PCA with neural networks?
+**Liner vs non-linear models**
+
+Linear model result graph is has a constant rate of change, plotted with a straight line as the dependent variable changes in response to the independent variable. 
+Non-linear model result graph does not have a constant rate of change.
+linear equation gives straight line, whereas non-linear equation gives conic curve - circle, parabola etc
+Linear model - linear regression model used for predicting the price of a house by analyzing historical data. Linear Regression can be of 2 types - Simple and Multiple Linear Regression.
+Non- linear models - Neural Networks
+
+**autoencoders vs PCA**
+
+Principal Component Analysis (PCA) is an unsupervised learning algorithm technique. It examines relations between set of variables. It reduces dimensions in large data sets. It transform large set of variables into a smaller one without lossing most of the information.
+
+Autoencoders used for non linear and complex data.
+
+**recreate PCA with neural networks**
+
+In simple neural network architecture when inout layers have more nodes then next layer. Next layers performs a compression or dimension reduction similar. This is similar ot PCA action.
 
 Can You Explain How Autoencoders Can be Used for Anomaly Detection?
 
